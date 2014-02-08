@@ -1,0 +1,252 @@
+/*
+*	DevilNotes-Original-Theme, Made by Evlos.
+*/
+
+/* Reset CSS */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+/* Clearfix */
+* html .clearfix {
+	height: 1%; /* IE5-6 */
+}
+*+html .clearfix {
+	display: inline-block; /* IE7not8 */
+}
+.clearfix:after { /* FF, IE8, O, S, etc. */
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/* Base */
+a {
+	color: #268785;
+	text-decoration: none;
+}
+h1 {
+	font-size: 40px;
+}
+ul {
+	margin: 18px 0;
+	list-style: circle;
+}
+li {
+	margin-left: 36px;
+	padding: 4px 0;
+}
+table {
+}
+table td, table th {
+	padding: 8px 12px;
+}
+pre {
+	font-family: 'Monaco', 'monospace';
+	background: #fafafa;
+	border-left: 3px solid #eee;
+	padding: 8px 12px;
+	margin: 12px 0 0;
+	overflow-y: hidden;
+	overflow-x: scroll;
+}
+strong {
+	border-bottom: 2px solid #ddd;
+}
+
+/* General */
+body {
+	font-family: 'Open Sans', 'Microsoft Yahei', sans-serif;
+	background: url('images/bg.gif');
+	line-height: 24px;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.content p:first-letter{
+}
+.content p {
+	padding: 12px 0 0;
+	line-height: 20px;
+}
+.box {
+	border-bottom: 3px solid #eee;
+	margin: 25px 0;
+	background: #fefefe;
+	padding: 30px 30px 15px;
+	-moz-box-shadow: 0px 0px 6px #888;
+	-webkit-box-shadow: 0px 0px 6px #888;
+	box-shadow: 0px 0px 6px #888;
+	overflow: hidden;
+}
+.inside {
+	margin: 0 0 25px;
+	border-top: 3px solid #eee;
+	background: #fafafa;
+	padding: 12px 12px 12px 0;
+	color: #aaa;
+	word-wrap: break-word;
+	word-break: break-all;
+	overflow: hidden;
+}
+.inside ul {
+	margin: 0;
+}
+.inside a {
+	color: #aaa;
+	border-bottom: 2px solid #eee;
+}
+.inside h3 {
+	padding: 0 0 8px 18px;
+	border-bottom: 3px dashed #eee;
+	margin: 0 0 10px 0;
+}
+.readmore {
+	text-align: right;
+}
+.show h3 {
+	padding: 3px 0 3px 12px;
+	border-left: 3px solid #268785;
+	background: #EEE;
+	margin: 30px 0 10px 0;
+}
+.ad {
+	background: #fafafa;
+	margin: 30px 0;
+	text-align: center;
+}
+
+/* Detail */
+#wrapper {
+	width: 90%;
+	padding: 25px 30px;
+	margin: 0 auto;
+	border-top: 8px solid #eee;
+	border-bottom: 8px solid #eee;
+}
+#header {
+	border-bottom: 3px solid #268785;
+	padding: 15px 0 25px;
+}
+#header .title h1 {
+	float: left;
+}
+#header .title h1 a {
+	color: #268785;
+}
+#header .title .desc {
+	float: right;
+	font-size: 40px;
+	color: #bbb;
+}
+
+#sidebar {
+	width: 20%;
+	margin-top: 27px;
+}
+#sidebar li.dsq-widget-item {
+	margin-left: 24px
+}
+
+#content {
+	width: 77%;
+	margin: 27px 0 25px 0;
+	padding: 0 0 15px 0;
+}
+#content .article {
+	border-bottom: 3px solid #eee;
+	padding-bottom: 25px;
+	margin-bottom: 25px;
+}
+#content .article .content .title, #article .content .title {
+	font-size: 24px;
+	padding-bottom: 18px;
+}
+#content .article .content, #article .content {
+	width: 73%;
+	margin: 0 0 30px;
+}
+#content .sidebar {
+	width: 23%;
+}
+
+#article, #sidebar {
+	padding-bottom: 25px;
+	margin-bottom: 25px;
+}
+#article .title {
+}
+#article .content {
+}
+#article .comments {
+	border-top: 3px solid #EEE;
+	padding: 30px 0 0 0;
+	margin: 50px 0 0 0;
+}
+
+#footer {
+	color: #ddd;
+	border-top: 3px solid #EEE;
+	padding: 25px 0 25px;
+}
+#footer p {
+	line-height: 24px;
+}
+#footer a, #links a {
+	color: #aaa;
+}
+
+#errors {
+	padding: 50px 0;
+	font-size: 48px;
+	text-align: center;
+	color: #ddd;
+}
+
+#links, #panel, #paged {
+	margin-bottom: 15px;
+}
+#paged {
+	margin-bottom: 35px;
+	border-bottom: 3px solid #EEE;
+	padding: 0 20px 15px;
+}
+#links ul {
+	margin: 0;
+	list-style: none;
+	border-right: 2px solid #eee;
+}
+#links li {
+	border-left: 2px solid #eee;
+	padding-left: 8px;
+	margin: 0;
+	width: 118px;
+}
+
+#panel .tcontent, #panel .ttext {
+	width: 96%;
+	font-size: 15px;
+}
+#panel .tcontent {
+	height: 500px;
+}
+#panel .ttext {
+}
+#panel table {
+	width: 100%;
+	margin-top: 18px;
+}
+#panel table .ar {
+	text-align: right;
+	width: 10%;
+}
+#panel table th {
+	text-align: left;
+	color: #268785;
+	background: #fafafa;
+}
+
+/* END */

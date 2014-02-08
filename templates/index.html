@@ -1,0 +1,61 @@
+{% extends 'wrapper.html' %}
+
+{% block content %}
+
+<div id="articles">
+	{% for item in items['index'] %}
+	<div class="article clearfix">
+		<div class="content left">
+			<h2 class="title">
+				<a href="/p/{{ item['id'] }}">{{ item['title'] }}</a>
+			</h2>
+			<div class="show">
+				{{ item['content'] }}
+				<p class="readmore">
+					<a href="/p/{{ item['id'] }}">Read more ...</a>
+				</p>
+			</div>
+		</div>
+		<div class="sidebar right">
+			<div class="inside">
+				<ul>
+					<li>{{ handler.timesFormatDate(item['id']) }}</li>
+					<li>{{ handler.timesFormatTime(item['id']) }}</li>
+					<li><a href="{{ escape(handler.settings["url"]) }}p/{{ item['id'] }}#disqus_thread">Loading ..</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	{% end %}
+</div>
+
+{% if page > 0 %}
+	<div id="paged" class="clearfix">
+		{% if page > 1 %}
+			<div class="left">
+				{% if page == 2 %}
+					<a href="/"><- Prev</a>
+				{% else %}
+					<a href="/page/{{ handler.minus(page) }}"><- Prev</a>
+				{% end %}
+			</div>
+		{% end %}
+		{% if items['isPagedEnough'] %}
+			<div class="right">
+				<a href="/page/{{ handler.plus(page) }}">Next -></a>
+			</div>
+		{% end %}
+	</div>
+{% end %}
+
+<div id="links">
+	<ul class="clearfix">
+	{% for link in links %}
+		<li class="left">
+			<a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+		</li>
+	{% end %}
+	<ul>
+</div>
+
+{% end %}
